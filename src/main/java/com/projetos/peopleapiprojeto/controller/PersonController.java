@@ -1,15 +1,27 @@
 package com.projetos.peopleapiprojeto.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.projetos.peopleapiprojeto.dto.MessageResponseDTO;
+import com.projetos.peopleapiprojeto.entity.Person;
+import com.projetos.peopleapiprojeto.repository.PersonRepository;
+import com.projetos.peopleapiprojeto.service.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/people")
 public class PersonController {
 
-    @GetMapping
-    public String getBook(){
-        return "API Test! 22082021";
+    private PersonService personService;
+
+    @Autowired
+    public PersonController(PersonService personService) {
+        this.personService = personService;
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public MessageResponseDTO createPerson(@RequestBody Person person){
+        return personService.createPerson(person);
     }
 }
