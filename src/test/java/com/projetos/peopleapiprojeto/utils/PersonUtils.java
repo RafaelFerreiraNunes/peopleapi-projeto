@@ -20,7 +20,7 @@ public class PersonUtils {
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)
                 .birthDate("04-04-2010")
-                .phones(Collections.singletonList(one.digitalinnovation.personapi.utils.PhoneUtils.createFakeDTO()))
+                .phones(Collections.singletonList(PhoneUtils.createFakeDTO()))
                 .build();
     }
 
@@ -31,7 +31,7 @@ public class PersonUtils {
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)
                 .birthDate(BIRTH_DATE)
-                .phones(Collections.singletonList(one.digitalinnovation.personapi.utils.PhoneUtils.createFakeEntity()))
+                .phones(Collections.singletonList(PhoneUtils.createFakeEntity()))
                 .build();
     }
 }
