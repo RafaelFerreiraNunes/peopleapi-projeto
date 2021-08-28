@@ -1,7 +1,7 @@
-package one.digitalinnovation.personapi.utils;
+package com.projetos.peopleapiprojeto.utils;
 
-import one.digitalinnovation.personapi.dto.request.PersonDTO;
-import one.digitalinnovation.personapi.entity.Person;
+import com.projetos.peopleapiprojeto.dto.request.PersonDTO;
+import com.projetos.peopleapiprojeto.entity.Person;
 
 import java.time.LocalDate;
 import java.util.Collections;
@@ -20,7 +20,7 @@ public class PersonUtils {
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)
                 .birthDate("04-04-2010")
-                .phones(Collections.singletonList(PhoneUtils.createFakeDTO()))
+                .phones(Collections.singletonList(one.digitalinnovation.personapi.utils.PhoneUtils.createFakeDTO()))
                 .build();
     }
 
@@ -31,7 +31,7 @@ public class PersonUtils {
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)
                 .birthDate(BIRTH_DATE)
-                .phones(Collections.singletonList(PhoneUtils.createFakeEntity()))
+                .phones(Collections.singletonList(one.digitalinnovation.personapi.utils.PhoneUtils.createFakeEntity()))
                 .build();
     }
 }

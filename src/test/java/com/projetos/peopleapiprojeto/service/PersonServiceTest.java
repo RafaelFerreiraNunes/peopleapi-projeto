@@ -1,19 +1,17 @@
-package one.digitalinnovation.personapi.service;
+package com.projetos.peopleapiprojeto.service;
 
-import one.digitalinnovation.personapi.dto.request.PersonDTO;
-import one.digitalinnovation.personapi.dto.response.MessageResponseDTO;
-import one.digitalinnovation.personapi.entity.Person;
-import one.digitalinnovation.personapi.repository.PersonRepository;
-import one.digitalinnovation.personapi.utils.PersonUtils;
-import org.junit.jupiter.api.Assertions;
+import com.projetos.peopleapiprojeto.dto.MessageResponseDTO;
+import com.projetos.peopleapiprojeto.dto.request.PersonDTO;
+import com.projetos.peopleapiprojeto.entity.Person;
+import com.projetos.peopleapiprojeto.repository.PersonRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static one.digitalinnovation.personapi.utils.PersonUtils.*;
+import static com.projetos.peopleapiprojeto.utils.PersonUtils.createFakeDTO;
+import static com.projetos.peopleapiprojeto.utils.PersonUtils.createFakeEntity;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
